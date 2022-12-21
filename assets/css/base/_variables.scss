@@ -1,0 +1,32 @@
+// Variable SCSS
+// Fonts
+$font-Montserrat: ('Montserrat', sans-serif);
+// Colors
+$primary: #FB3B45;
+$blue: #2684FF;
+$blue-900: #006CBE;
+$green: #0EC6BF;
+$white: #FFFFFF;
+$dark-900 :#012451;
+$dark-800 :#150E72;
+$light-100: #FBFBFC;
+$black: #000000;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 991px;
+$laptop-width: 1199px;
+$desktop-width: 1399px;
+// Container Sizes
+$container-lg: 1380px;
+$container: 1220px;
+$gutter-x: 40px;
+$gutter-x-xs: 20px;
+// Transition
+$link-transition: 200ms all cubic-bezier(.49, .025, .49, 1);
+$btn-transition: 300ms background-color cubic-bezier(.49, .025, .49, 1),
+300ms color cubic-bezier(.49, .025, .49, 1),
+300ms border-color cubic-bezier(.49, .025, .49, 1),
+300ms opacity cubic-bezier(.49, .025, .49, 1),
+300ms box-shadow cubic-bezier(.49, .025, .49, 1),
+300ms stroke cubic-bezier(.49, .025, .49, 1),
+300ms fill cubic-bezier(.49, .025, .49, 1);

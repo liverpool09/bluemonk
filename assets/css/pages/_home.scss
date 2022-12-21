@@ -1,0 +1,502 @@
+    // Home Page SCSS here
+    .hero-section {
+        border-radius: 10px;
+        padding: 20px 20px 0 20px;
+        @extend %bg-image;
+        @include laptop {
+            padding: 0;
+            border-radius: 0;
+        }
+        & .hero-wrapper {
+            background-image: url(../assets/images/home/hero-bg.jpg);
+            height: calc(100vh - 40px);
+            min-height: 700px;
+            border-radius: 10px;
+            @extend %bg-image;
+            @include laptop {
+                border-radius: 0;
+            }
+            @include mobile {
+                min-height: 400px;
+                padding-top: 128px;
+                height: 100vh;
+                background-position: 30% center;
+            }
+        }
+        & .container {
+            height: 100%;
+            & .hero-body {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                & .hero-btns {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    margin-top: 34px;
+                    @include mobile {
+                        flex-direction: column;
+                        row-gap: 16px;
+                    }
+                    & .btn {
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .client-section {
+        padding: 90px 0;
+        @include tablet {
+            padding: 70px 0;
+        }
+        @include mobile {
+            padding: 50px 0;
+        }
+        & .client-header {
+            text-align: center;
+        }
+        & .client-body {
+            margin-top: 42px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 20px;
+            row-gap: 35px;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            @include tablet {
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 20px;
+            }
+            @include mobile {
+                margin-top: 40px;
+                grid-template-columns: repeat(7, 180px);
+                grid-template-rows: 110px 110px;
+                grid-auto-flow: column;
+                overflow: auto;
+                scroll-snap-type: x mandatory;
+            }
+            & li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: $light-100;
+                border-radius: 10px;
+                height: 110px;
+                @include mobile {
+                    scroll-snap-align: center;
+                }
+            }
+        }
+    }
+    
+    .wedo-section {
+        padding: 90px 0;
+        background-color: $light-100;
+        @include tablet {
+            padding: 70px 0;
+        }
+        @include mobile {
+            padding: 50px 0;
+        }
+        & .wedo-header {
+            text-align: center;
+            max-width: 818px;
+            margin: 0 auto;
+            & p {
+                margin-top: 12px;
+            }
+        }
+        & .wedo-body {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 30px;
+            @include tablet {
+                margin-top: 50px;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 30px;
+            }
+            @include mobile {
+                margin-top: 40px;
+                grid-template-columns: 1fr;
+            }
+            & a {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                row-gap: 15px;
+            }
+        }
+    }
+    
+    .work-section {
+        padding: 90px 0;
+        @include tablet {
+            padding: 70px 0;
+        }
+        @include mobile {
+            padding: 50px 0;
+        }
+        & .work-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            column-gap: 30px;
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 20px;
+            }
+            & p {
+                margin-top: 12px;
+            }
+            & .btn {
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+        & .work-body {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 80px;
+            row-gap: 80px;
+            @include laptop {
+                column-gap: 30px;
+            }
+            @include tablet {
+                margin-top: 50px;
+                row-gap: 50px;
+            }
+            @include mobile {
+                margin-top: 40px;
+                row-gap: 40px;
+            }
+            & .work-item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: calc(55% - 40px);
+                @include laptop {
+                    width: calc(55% - 20px);
+                }
+                @include mobile {
+                    width: 100%;
+                }
+                &:nth-child(2n) {
+                    width: calc(45% - 40px);
+                    align-self: flex-end;
+                    @include laptop {
+                        width: calc(45% - 20px);
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(3n) {
+                    width: calc(45% - 40px);
+                    @include laptop {
+                        width: calc(45% - 20px);
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(4n) {
+                    width: calc(55% - 40px);
+                    @include laptop {
+                        width: calc(55% - 20px);
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                & .work-image {
+                    margin-bottom: 24px;
+                    border-radius: 11px;
+                    & img {
+                        border-radius: 11px;
+                    }
+                }
+                & .text-green {
+                    margin-bottom: 12px;
+                }
+                & .btn {
+                    margin-top: 12px;
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .team-section {
+        padding: 110px 0;
+        background-color: $light-100;
+        @include tablet {
+            padding: 80px 0;
+        }
+        @include mobile {
+            padding: 60px 0;
+        }
+        & .team-wrapper {
+            position: relative;
+            z-index: 1;
+            & .team-body {
+                display: flex;
+                align-items: center;
+                height: 602px;
+                justify-content: flex-start;
+                @include tablet {
+                    flex-direction: column-reverse;
+                    height: auto;
+                    row-gap: 50px;
+                }
+                @include mobile {
+                    row-gap: 30px;
+                }
+                & .team-image {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: auto;
+                    right: 0;
+                    width: 48vw;
+                    @include laptop {
+                        width: 40vw;
+                    }
+                    @include tablet {
+                        position: static;
+                        width: 100%;
+                        height: auto
+                    }
+                    & img {
+                        @extend %object-cover;
+                        border-radius: 12px 0 0 12px;
+                        @include tablet {
+                            border-radius: 12px;
+                        }
+                    }
+                }
+                & .team-text {
+                    max-width: 530px;
+                    width: 100%;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: flex-start;
+                    @include tablet {
+                        max-width: 100%;
+                    }
+                    & p {
+                        margin-top: 20px;
+                        padding-right: 30px;
+                        @include tablet {
+                            padding-right: 0;
+                        }
+                    }
+                    & .btn {
+                        margin-top: 23px;
+                        width: 190px;
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .values-section {
+        padding: 0 20px;
+        @include mobile {
+            padding: 0;
+        }
+        & .values-wrapper {
+            padding: 90px 0 100px;
+            background: linear-gradient(150.43deg, #150E72 9.19%, #016DBF 96.83%);
+            border-radius: 10px;
+            @include tablet {
+                padding: 70px 0 80px;
+            }
+            @include mobile {
+                padding: 50px 0 60px;
+                border-radius: 0;
+            }
+            & .values-header {
+                text-align: center;
+                max-width: 818px;
+                margin: 0 auto;
+                & p {
+                    margin-top: 12px;
+                }
+            }
+            & .values-body {
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 30px;
+                align-items: center;
+                @include tablet {
+                    margin-top: 50px;
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 30px;
+                }
+                @include mobile {
+                    grid-template-columns: 1fr;
+                    margin-top: 40px;
+                }
+                & a {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    row-gap: 15px;
+                }
+            }
+        }
+    }
+    
+    .article-section {
+        padding: 90px 0;
+        @include tablet {
+            padding: 70px 0;
+        }
+        @include mobile {
+            padding: 50px 0;
+        }
+        & .article-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+                row-gap: 20px;
+                align-items: flex-start;
+            }
+            & .btn {
+                width: 190px;
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+        & .article-body {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            position: relative;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            @include tablet {
+                margin-top: 50px;
+            }
+            @include mobile {
+                margin-top: 40px;
+                grid-template-columns: repeat(3, 280px);
+                overflow: auto;
+                scroll-snap-type: x mandatory;
+            }
+            &::after {
+                content: '';
+                width: 565px;
+                height: 348px;
+                position: absolute;
+                bottom: -100px;
+                left: -273px;
+                background-image: url(../assets/images/svg/article-bg.svg);
+                z-index: -1;
+                @include mobile {
+                    display: none;
+                }
+            }
+            & .article-item {
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                @include mobile {
+                    scroll-snap-align: center;
+                }
+                & .article-content {
+                    position: absolute;
+                    padding: 22px 16px;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    row-gap: 23px;
+                }
+            }
+        }
+    }
+    
+    .project-section {
+        padding: 90px 0;
+        position: relative;
+        @include tablet {
+            padding: 70px 0;
+        }
+        @include mobile {
+            padding: 50px 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: $blue-900;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 100%;
+            max-width: 996px;
+        }
+        & .project-header {
+            text-align: center;
+            & p {
+                margin-top: 12px;
+            }
+        }
+        & .project-body {
+            & .calendly-inline-widget {
+                height: 660px;
+                min-width: 320px;
+                @include mobile {
+                    height: 780px;
+                    overflow: hidden !important;
+                }
+            }
+            @include mobile {
+                margin-top: 40px;
+            }
+        }
+        & .project-footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            @include tablet {
+                margin-top: 30px;
+            }
+        }
+    }
