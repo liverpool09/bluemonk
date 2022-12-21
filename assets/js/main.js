@@ -3,6 +3,7 @@
     // JS loaded
     let body = document.body;
     body.classList.add('loaded');
+    window.scrollTo(0, 0);
 
     // Toggle Menu
     const toggleMenu = (toggleID, toggleNav) => {
