@@ -72,7 +72,7 @@
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.defaults({
         toggleActions: "play none none none",
-        start: "top 70%",
+        start: "top 80%",
     });
 
 
