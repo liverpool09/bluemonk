@@ -156,7 +156,7 @@
             column-gap: 30px;
             @include mobile {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
                 row-gap: 20px;
             }
             & p {
@@ -300,6 +300,9 @@
                     align-items: flex-start;
                     @include tablet {
                         max-width: 100%;
+                    }
+                    @include mobile {
+                        align-items: stretch;
                     }
                     & p {
                         margin-top: 20px;
@@ -497,6 +500,11 @@
             margin-top: 50px;
             @include tablet {
                 margin-top: 30px;
+            }
+            & .btn {
+                @include mobile {
+                    width: 100%;
+                }
             }
         }
     }
