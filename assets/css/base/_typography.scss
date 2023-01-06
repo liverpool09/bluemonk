@@ -43,7 +43,10 @@ h1,
     // line-height: 64px;
     line-height: 1.333;
     @include mobile {
-        font-size: 42px;
+        font-size: 40px;
+    }
+    @include mini-mobile {
+        font-size: 36px;
     }
 }
 
@@ -55,7 +58,10 @@ h2,
     line-height: 1.33;
     letter-spacing: 0.03em;
     @include mobile {
-        font-size: 36px;
+        font-size: 32px;
+    }
+    @include mini-mobile {
+        font-size: 28px;
     }
 }
 

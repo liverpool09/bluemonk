@@ -157,6 +157,10 @@
                         padding: 8px 0;
                         border-bottom: 2px solid transparent;
                         letter-spacing: 0.06em;
+                        white-space: nowrap;
+                        @include mobile {
+                            font-size: 25px;
+                        }
                         &:hover {
                             color: $blue;
                         }

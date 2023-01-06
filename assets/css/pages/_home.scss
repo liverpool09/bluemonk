@@ -9,17 +9,19 @@
         }
         & .hero-wrapper {
             background-image: url(../assets/images/home/hero-bg.webp);
-            height: calc(100vh - 40px);
-            min-height: 700px;
+            height: 700px;
             border-radius: 10px;
             @extend %bg-image;
+            background-position: center center;
             @include laptop {
                 border-radius: 0;
             }
+            @include tablet {
+                height: 600px;
+            }
             @include mobile {
-                min-height: 400px;
+                height: 600px;
                 padding-top: 128px;
-                height: 100vh;
                 background-position: 30% center;
             }
         }
@@ -74,13 +76,9 @@
                 display: none;
             }
             @include tablet {
-                grid-template-columns: repeat(4, 1fr);
-                row-gap: 20px;
-            }
-            @include mobile {
                 margin-top: 40px;
-                grid-template-columns: repeat(7, 180px);
-                grid-template-rows: 110px 110px;
+                grid-template-columns: repeat(14, 180px);
+                grid-template-rows: 110px;
                 grid-auto-flow: column;
                 overflow: auto;
                 scroll-snap-type: x mandatory;
@@ -90,7 +88,7 @@
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-                background-color: $light-100;
+                background-color: $light-200;
                 border-radius: 10px;
                 height: 110px;
                 @include mobile {
@@ -131,7 +129,7 @@
                 margin-top: 40px;
                 grid-template-columns: 1fr;
             }
-            & a {
+            & .wedo-unit {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
@@ -174,6 +172,13 @@
             flex-wrap: wrap;
             column-gap: 80px;
             row-gap: 80px;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
             @include laptop {
                 column-gap: 30px;
             }
@@ -184,6 +189,10 @@
             @include mobile {
                 margin-top: 40px;
                 row-gap: 40px;
+                overflow: auto;
+                scroll-snap-type: x mandatory;
+                flex-direction: row;
+                flex-wrap: nowrap;
             }
             & .work-item {
                 display: flex;
@@ -195,6 +204,8 @@
                 }
                 @include mobile {
                     width: 100%;
+                    scroll-snap-align: center;
+                    min-width: 100%;
                 }
                 &:nth-child(2n) {
                     width: calc(45% - 40px);
@@ -258,9 +269,8 @@
             z-index: 1;
             & .team-body {
                 display: flex;
-                align-items: center;
-                height: 602px;
                 justify-content: flex-start;
+                column-gap: 20px;
                 @include tablet {
                     flex-direction: column-reverse;
                     height: auto;
@@ -270,15 +280,6 @@
                     row-gap: 30px;
                 }
                 & .team-image {
-                    position: absolute;
-                    height: 100%;
-                    top: 0;
-                    left: auto;
-                    right: 0;
-                    width: 48vw;
-                    @include laptop {
-                        width: 40vw;
-                    }
                     @include tablet {
                         position: static;
                         width: 100%;
@@ -286,10 +287,8 @@
                     }
                     & img {
                         @extend %object-cover;
-                        border-radius: 12px 0 0 12px;
-                        @include tablet {
-                            border-radius: 12px;
-                        }
+                        object-position: left;
+                        border-radius: 12px;
                     }
                 }
                 & .team-text {
@@ -298,6 +297,7 @@
                     flex-direction: column;
                     display: flex;
                     align-items: flex-start;
+                    flex-shrink: 0;
                     @include tablet {
                         max-width: 100%;
                     }
@@ -399,25 +399,12 @@
         }
         & .article-body {
             margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
             position: relative;
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-            &::-webkit-scrollbar {
-                display: none;
-            }
             @include tablet {
                 margin-top: 50px;
             }
             @include mobile {
                 margin-top: 40px;
-                grid-template-columns: repeat(3, 280px);
-                overflow: auto;
-                scroll-snap-type: x mandatory;
             }
             &::after {
                 content: '';
@@ -438,6 +425,11 @@
                 position: relative;
                 @include mobile {
                     scroll-snap-align: center;
+                }
+                & .article-image {
+                    @include mobile {
+                        height: 440px;
+                    }
                 }
                 & .article-content {
                     position: absolute;
@@ -483,10 +475,13 @@
         }
         & .project-body {
             & .calendly-inline-widget {
-                height: 660px;
+                height: 700px;
                 min-width: 320px;
+                @include tablet {
+                    height: 500px;
+                }
                 @include mobile {
-                    height: 780px;
+                    height: 400px;
                     overflow: hidden !important;
                 }
             }

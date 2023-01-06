@@ -51,6 +51,9 @@
             align-items: center;
             column-gap: 10px;
             margin-top: 26px;
+            @include tablet {
+                margin-top: 36px;
+            }
             & a {
                 font-size: 14px;
             }
@@ -61,6 +64,9 @@
             column-gap: 22px;
             margin-top: 18px;
             margin-bottom: 36px;
+            @include tablet {
+                margin-bottom: 46px;
+            }
             @include mobile {
                 margin-bottom: 8px;
                 margin-top: 28px;

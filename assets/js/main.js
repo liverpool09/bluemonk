@@ -68,12 +68,31 @@
     }
     slideTopEffect('.header-section');
 
+    // Blog Swiper
+    const blogSwiper = document.querySelector("#blogSwiper");
+    if (blogSwiper) {
+        const swiper = new Swiper('#blogSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    }
 
     // gsap animations
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.defaults({
         toggleActions: "play none none none",
-        start: "top 80%",
+        start: "top 95%",
     });
 
 
