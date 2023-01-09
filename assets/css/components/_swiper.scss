@@ -1,0 +1,19 @@
+// Swiper SCSS
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    gap: 8px;
+    & .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: rgba($black, 0.1);
+        border-radius: 8px;
+        transition: 0.3s all ease;
+        &.swiper-pagination-bullet-active {
+            background-color: $dark-900;
+        }
+    }
+}

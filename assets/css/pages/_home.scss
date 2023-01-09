@@ -9,7 +9,8 @@
         }
         & .hero-wrapper {
             background-image: url(../assets/images/home/hero-bg.webp);
-            height: 700px;
+            height: 850px;
+            max-height: calc(100vh - 40px);
             border-radius: 10px;
             @extend %bg-image;
             background-position: center center;
@@ -17,10 +18,10 @@
                 border-radius: 0;
             }
             @include tablet {
-                height: 600px;
+                height: 700px;
             }
             @include mobile {
-                height: 600px;
+                height: 650px;
                 padding-top: 128px;
                 background-position: 30% center;
             }
@@ -52,9 +53,9 @@
     }
     
     .client-section {
-        padding: 90px 0;
+        padding: 90px 0 110px;
         @include tablet {
-            padding: 70px 0;
+            padding: 70px 0 80px;
         }
         @include mobile {
             padding: 50px 0;
@@ -68,20 +69,11 @@
             grid-template-columns: repeat(5, 1fr);
             column-gap: 20px;
             row-gap: 35px;
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-            &::-webkit-scrollbar {
-                display: none;
-            }
             @include tablet {
+                column-gap: 0;
                 margin-top: 40px;
-                grid-template-columns: repeat(14, 180px);
-                grid-template-rows: 110px;
-                grid-auto-flow: column;
-                overflow: auto;
-                scroll-snap-type: x mandatory;
+                padding-bottom: 50px;
+                display: flex;
             }
             & li {
                 display: flex;
@@ -91,16 +83,25 @@
                 background-color: $light-200;
                 border-radius: 10px;
                 height: 110px;
+                @include tablet {
+                    width: 212px;
+                }
                 @include mobile {
                     scroll-snap-align: center;
                 }
+            }
+        }
+        & .swiper-pagination {
+            display: none;
+            @include tablet {
+                display: flex;
             }
         }
     }
     
     .wedo-section {
         padding: 90px 0;
-        background-color: $light-100;
+        background-color: $light-200;
         @include tablet {
             padding: 70px 0;
         }
@@ -172,13 +173,6 @@
             flex-wrap: wrap;
             column-gap: 80px;
             row-gap: 80px;
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-            &::-webkit-scrollbar {
-                display: none;
-            }
             @include laptop {
                 column-gap: 30px;
             }
@@ -187,10 +181,10 @@
                 row-gap: 50px;
             }
             @include mobile {
+                padding-bottom: 40px;
                 margin-top: 40px;
                 row-gap: 40px;
-                overflow: auto;
-                scroll-snap-type: x mandatory;
+                column-gap: 0;
                 flex-direction: row;
                 flex-wrap: nowrap;
             }
@@ -204,7 +198,6 @@
                 }
                 @include mobile {
                     width: 100%;
-                    scroll-snap-align: center;
                     min-width: 100%;
                 }
                 &:nth-child(2n) {
@@ -242,6 +235,9 @@
                         border-radius: 11px;
                     }
                 }
+                & h3 {
+                    margin-bottom: 12px;
+                }
                 & .text-green {
                     margin-bottom: 12px;
                 }
@@ -257,7 +253,8 @@
     
     .team-section {
         padding: 110px 0;
-        background-color: $light-100;
+        // background-color: $light-100;
+        background: linear-gradient(to bottom, $light-200, transparent);
         @include tablet {
             padding: 80px 0;
         }
@@ -418,6 +415,9 @@
                 @include mobile {
                     display: none;
                 }
+            }
+            & .swiper-wrapper {
+                padding-bottom: 50px;
             }
             & .article-item {
                 border-radius: 10px;

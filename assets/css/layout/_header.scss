@@ -158,7 +158,7 @@
                         border-bottom: 2px solid transparent;
                         letter-spacing: 0.06em;
                         white-space: nowrap;
-                        @include mobile {
+                        @include tablet {
                             font-size: 25px;
                         }
                         &:hover {

@@ -1,0 +1,383 @@
+// About SCSS
+.about-section {
+    padding: 90px 0 80px;
+    @include tablet {
+        padding: 70px 0 80px;
+    }
+    @include mobile {
+        padding: 50px 0;
+    }
+    & .about-block {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 0;
+        &::after {
+            content: "";
+            width: 565px;
+            height: 348px;
+            position: absolute;
+            top: 0px;
+            right: -383px;
+            background-image: url(../assets/images/svg/about-bg.svg);
+            z-index: -1;
+            @include mobile {
+                display: none;
+            }
+        }
+        & .about-header {
+            max-width: 940px;
+            & h2 {
+                margin-bottom: 30px;
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        & .about-body {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 100px;
+            @include tablet {
+                margin-top: 70px;
+                column-gap: 30px;
+            }
+            @include mobile {
+                margin-top: 50px;
+                grid-template-columns: 1fr;
+                row-gap: 40px;
+            }
+            & .about-step {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & h4 {
+                    margin-top: 24px;
+                }
+                & p {
+                    margin-top: 16px;
+                }
+            }
+        }
+        & .about-footer {
+            margin-top: 90px;
+            @include tablet {
+                margin-top: 70px;
+            }
+            @include mobile {
+                margin-top: 50px;
+            }
+            & .about-item {
+                position: relative;
+                & .about-image {
+                    height: 794px;
+                    border-radius: 10px;
+                    @include tablet {
+                        height: 500px;
+                    }
+                    @include mobile {
+                        height: 360px;
+                    }
+                }
+                & .about-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 70px 45px;
+                    @include mobile {
+                        padding: 20px 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-section {
+    padding: 20px 0;
+    @include tablet {
+        padding: 10px 0 0;
+    }
+    & .service-block {
+        max-width: 998px;
+        margin: 0 auto;
+        &>h2 {
+            text-align: center;
+        }
+        & .service-body {
+            margin-top: 80px;
+            @include tablet {
+                margin-top: 60px;
+            }
+            @include mobile {
+                margin-top: 40px;
+            }
+            & .service-item {
+                padding: 40px 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                border-top: 2px solid $blue-900;
+                @include mobile {
+                    padding: 30px 0;
+                    grid-template-columns: 1fr;
+                    row-gap: 30px;
+                }
+                &:last-child {
+                    border-bottom: 2px solid $blue-900;
+                }
+                & .service-left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 40px;
+                    @include mobile {
+                        row-gap: 20px;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                }
+                & .service-right {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 24px;
+                    & .service-unit {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        row-gap: 12px;
+                        & h4 {
+                            &::before {
+                                content: '';
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                                display: inline-block;
+                                background-color: $dark-900;
+                                margin-right: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .service-footer {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            @include tablet {
+                margin-top: 60px;
+            }
+            @include mobile {
+                margin-top: 40px;
+            }
+            & .btn {
+                width: 280px;
+            }
+        }
+    }
+}
+
+.meet-section {
+    padding: 90px 0 110px;
+    background-image: url(../assets/images/about/map.png);
+    background-size: 1439px 784px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    @include tablet {
+        padding: 70px 0 80px;
+    }
+    @include mobile {
+        padding: 50px 0 60px;
+    }
+    & .meet-header {
+        text-align: center;
+        max-width: 592px;
+        margin: 0 auto;
+        & p {
+            margin-top: 12px;
+        }
+    }
+    & .meet-body {
+        max-width: 795px;
+        margin-top: 80px;
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @include tablet {
+            margin-top: 60px;
+        }
+        @include mobile {
+            margin-top: 40px;
+            grid-template-columns: 1fr;
+        }
+        & .meet-item {
+            background-color: $white;
+            padding: 12px 12px 24px 12px;
+            box-shadow: 0px 7px 23px rgba(0, 23, 89, 0.18);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .meet-avatar {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 10px;
+                & .profile {
+                    position: absolute;
+                    width: 102px;
+                    height: 102px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-left: -1px;
+                    margin-top: -1px;
+                }
+            }
+            &:nth-child(2n) {
+                & .meet-avatar {
+                    & .placeholder {
+                        & img {
+                            transform: rotate(120deg);
+                        }
+                    }
+                    & .profile {
+                        margin-left: 0;
+                        margin-top: -1px;
+                    }
+                }
+            }
+            &:nth-child(3n) {
+                & .meet-avatar {
+                    & .placeholder {
+                        & img {
+                            transform: rotate(240deg);
+                        }
+                    }
+                    & .profile {
+                        margin-left: -1px;
+                        margin-top: 0;
+                    }
+                }
+            }
+            & .meet-location {
+                display: flex;
+                align-items: center;
+                font-family: $font-Abel;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                column-gap: 5px;
+                color: $blue;
+                margin-bottom: 12px;
+            }
+            & h6 {
+                margin-bottom: 6px;
+            }
+            & .meet-position {
+                font-family: $font-Abel;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 18px;
+            }
+            & .meet-links {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                & a {
+                    width: 34px;
+                    height: 34px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                }
+                & a.linkedin {
+                    background-color: $blue;
+                    &:hover {
+                        background-color: darken($blue, 10%);
+                    }
+                }
+                & a.whatsapp {
+                    background-color: $green;
+                    &:hover {
+                        background-color: darken($green, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.booking-section {
+    padding: 130px 0;
+    position: relative;
+    text-align: center;
+    @include tablet {
+        padding: 90px 0;
+    }
+    @include mobile {
+        padding: 70px 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: $blue-900;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 100%;
+        max-width: 996px;
+    }
+    & .booking-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            width: 761px;
+            height: 217px;
+            position: absolute;
+            bottom: -230px;
+            left: -183px;
+            background-image: url(../assets/images/svg/booking-bg.svg);
+            z-index: -1;
+            background-repeat: no-repeat;
+        }
+        & h4 {
+            margin-top: 31px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
+        & .booking-btns {
+            margin-top: 72px;
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+            @include mobile {
+                margin-top: 42px;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+        }
+    }
+}

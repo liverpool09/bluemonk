@@ -50,8 +50,8 @@
     color: $white;
     border: 1px solid $primary;
     &:hover {
-        background-color: lighten($primary, 10%);
-        border-color: lighten($primary, 10%);
+        background-color: darken($primary, 20%);
+        border-color: darken($primary, 20%);
         color: $white;
     }
 }
