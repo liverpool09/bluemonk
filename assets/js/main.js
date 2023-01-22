@@ -201,6 +201,31 @@
         });
     }
 
+    // Work Swiper
+    const relatedPortfolioSwiper = document.querySelector("#relatedPortfolioSwiper");
+    if (relatedPortfolioSwiper) {
+        const swiper = new Swiper('#relatedPortfolioSwiper', {
+            // Optional parameters
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            centeredSlides: true,
+            initialSlide: 1,
+            grabCursor: true,
+            navigation: {
+                nextEl: "#relatedPortfolioSwiper .swiper-button-next",
+                prevEl: "#relatedPortfolioSwiper .swiper-button-prev",
+            },
+            pagination: {
+                el: "#relatedPortfolioSwiper .swiper-pagination",
+            },
+            breakpoints: {
+                640: {
+                    spaceBetween: 20,
+                }
+            },
+        });
+    }
+
     // gsap animations
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.defaults({
