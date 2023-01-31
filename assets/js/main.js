@@ -189,7 +189,7 @@
 
     // Mobile Application Swiper
     const mobileApplicationSwiper = document.querySelector("#mobileApplicationSwiper");
-    if (brandingSwiper && window.innerWidth <= 768) {
+    if (mobileApplicationSwiper && window.innerWidth <= 768) {
         const swiper = new Swiper('#mobileApplicationSwiper', {
             // Optional parameters
             slidesPerView: 1,
@@ -197,6 +197,20 @@
             grabCursor: true,
             pagination: {
                 el: "#mobileApplicationSwiper .swiper-pagination",
+            },
+        });
+    }
+
+    // Mobile Meet Swiper
+    const mobileMeetSwiper = document.querySelector("#mobileMeetSwiper");
+    if (mobileMeetSwiper && window.innerWidth <= 768) {
+        const swiper = new Swiper('#mobileMeetSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grabCursor: true,
+            pagination: {
+                el: "#mobileMeetSwiper .swiper-pagination",
             },
         });
     }

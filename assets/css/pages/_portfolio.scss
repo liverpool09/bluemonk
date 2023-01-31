@@ -10,6 +10,13 @@
     & .portfolio-header {
         display: flex;
         justify-content: center;
+        margin-bottom: 90px;
+        @include tablet {
+            margin-bottom: 60px;
+        }
+        @include mobile {
+            margin-bottom: 40px;
+        }
         & .portfolio-links {
             display: flex;
             align-items: center;
@@ -47,7 +54,6 @@
         }
     }
     & .portfolio-body {
-        margin-top: 90px;
         display: flex;
         flex-wrap: wrap;
         column-gap: 80px;
@@ -56,12 +62,10 @@
             column-gap: 30px;
         }
         @include tablet {
-            margin-top: 60px;
             row-gap: 50px;
         }
         @include mobile {
             padding-bottom: 40px;
-            margin-top: 40px;
             row-gap: 40px;
             column-gap: 0;
             flex-direction: row;
@@ -79,7 +83,9 @@
                 width: 100%;
                 min-width: 100%;
             }
-            &:nth-child(2n) {
+            &:nth-child(3n-1),
+            &:nth-child(3n),
+            &:nth-child(7) {
                 width: calc(45% - 40px);
                 align-self: flex-end;
                 @include laptop {
@@ -88,17 +94,11 @@
                 @include mobile {
                     width: 100%;
                 }
-            }
-            &:nth-child(3n) {
-                width: calc(45% - 40px);
-                @include laptop {
-                    width: calc(45% - 20px);
-                }
-                @include mobile {
-                    width: 100%;
+                & .portfolio-image {
+                    min-height: 330px;
                 }
             }
-            &:nth-child(4n) {
+            &:nth-child(6n-1) {
                 width: calc(55% - 40px);
                 @include laptop {
                     width: calc(55% - 20px);
@@ -106,10 +106,20 @@
                 @include mobile {
                     width: 100%;
                 }
+                & .portfolio-image {
+                    min-height: 430px;
+                    @include mobile {
+                        min-height: 330px;
+                    }
+                }
             }
             & .portfolio-image {
                 margin-bottom: 24px;
                 border-radius: 11px;
+                min-height: 430px;
+                @include mobile {
+                    min-height: 330px;
+                }
                 & img {
                     border-radius: 11px;
                 }

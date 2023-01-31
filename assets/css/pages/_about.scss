@@ -72,12 +72,17 @@
                 position: relative;
                 & .about-image {
                     height: 794px;
-                    border-radius: 10px;
                     @include tablet {
                         height: 500px;
                     }
                     @include mobile {
                         height: 360px;
+                    }
+                    & img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
                     }
                 }
                 & .about-content {
@@ -184,17 +189,17 @@
 }
 
 .meet-section {
-    padding: 90px 0 110px;
+    padding: 90px 0;
     background-image: url(../assets/images/about/map.webp);
     background-size: 1439px 784px;
     background-position: 50%;
     background-repeat: no-repeat;
     background-position: center bottom;
     @include tablet {
-        padding: 70px 0 80px;
+        padding: 70px 0;
     }
     @include mobile {
-        padding: 50px 0 60px;
+        padding: 50px 0;
     }
     & .meet-header {
         text-align: center;
@@ -204,6 +209,9 @@
             margin-top: 12px;
         }
     }
+    & .swiper {
+        overflow: unset;
+    }
     & .meet-body {
         max-width: 795px;
         margin-top: 80px;
@@ -212,12 +220,16 @@
         margin-right: auto;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        padding-bottom: 30px;
         @include tablet {
             margin-top: 60px;
         }
         @include mobile {
             margin-top: 40px;
-            grid-template-columns: 1fr;
+            display: flex;
+            gap: 0;
+            padding-bottom: 50px;
+            max-width: none;
         }
         & .meet-item {
             background-color: $white;
