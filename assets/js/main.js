@@ -240,6 +240,102 @@
         });
     }
 
+    // All Article Swiper
+    const allArticlesSwiper = document.querySelector("#allArticlesSwiper");
+    if (allArticlesSwiper) {
+        const swiper = new Swiper('#allArticlesSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 16,
+            grabCursor: true,
+            pagination: {
+                el: "#allArticlesSwiper .swiper-pagination",
+            },
+            breakpoints: {
+                769: {
+                    spaceBetween: 40,
+                    slidesPerView: 2,
+                },
+                1023: {
+                    spaceBetween: 70,
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
+
+    // Top Article Swiper
+    const topStoriesSwiper = document.querySelector("#topStoriesSwiper");
+    if (topStoriesSwiper) {
+        const swiper = new Swiper('#topStoriesSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 16,
+            grabCursor: true,
+            pagination: {
+                el: "#topStoriesSwiper .swiper-pagination",
+            },
+            breakpoints: {
+                769: {
+                    spaceBetween: 40,
+                    slidesPerView: 2,
+                },
+                1023: {
+                    spaceBetween: 70,
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
+
+    // Popular Article Swiper
+    const popularArticlesSwiper = document.querySelector("#popularArticlesSwiper");
+    if (popularArticlesSwiper) {
+        const swiper = new Swiper('#popularArticlesSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 16,
+            grabCursor: true,
+            pagination: {
+                el: "#popularArticlesSwiper .swiper-pagination",
+            },
+            breakpoints: {
+                769: {
+                    spaceBetween: 40,
+                    slidesPerView: 2,
+                },
+                1023: {
+                    spaceBetween: 70,
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
+
+    // Popular Added Swiper
+    const recentlyAddedSwiper = document.querySelector("#recentlyAddedSwiper");
+    if (recentlyAddedSwiper) {
+        const swiper = new Swiper('#recentlyAddedSwiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 16,
+            grabCursor: true,
+            pagination: {
+                el: "#recentlyAddedSwiper .swiper-pagination",
+            },
+            breakpoints: {
+                769: {
+                    spaceBetween: 40,
+                    slidesPerView: 2,
+                },
+                1023: {
+                    spaceBetween: 70,
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
+
     // gsap animations
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.defaults({

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluemonk</title>
+    <link rel="shortcut icon" href="./assets/images/svg/favicon.svg" />
+    <!-- Bundle CSS -->
+    <link rel="stylesheet" href="dist/style.min.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container-lg">
+            <div id="toggleNav" class="header-body">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/svg/logo.svg" alt="logo" />
+                    </a>
+                </div>
+                <div class="menu-wrapper">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">About</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="active">
+                            <a href="our-stories.html">Our Stories</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-btns">
+                    <a href="#bookMeeting" class="btn btn-primary btn-md"><img src="assets/images/svg/calendar.svg" alt="icon" /> Book a meeting</a>
+                </div>
+                <button id="toggleBtn" type="button" class="toggler" aria-label="menu">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Stories Section -->
+        <section class="stories-section text-light">
+            <div class="stories-wrapper">
+                <div class="container">
+                    <div class="stories-body">
+                        <h2>Unlocking the Power of User Experience</h2>
+                        <h4>How UX and UI Design Drive Digital Success</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Stories Section -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="featured-header animate-up">
+                    <ul class="featured-links">
+                        <li>
+                            <a data-tab="allArticles" class="active" href="javascript:;">All articles</a>
+                        </li>
+                        <li>
+                            <a data-tab="topStories" href="javascript:;">Top stories</a>
+                        </li>
+                        <li>
+                            <a data-tab="popularArticles" href="javascript:;">Popular articles</a>
+                        </li>
+                        <li>
+                            <a data-tab="recentlyAdded" href="javascript:;">Recently added</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="featured-tabs">
+                    <!-- All articles Tab -->
+                    <div id="allArticles" class="tab-content active">
+                        <div class="swiper" id="allArticlesSwiper">
+                            <!-- Additional required wrapper -->
+                            <ul class="swiper-wrapper featured-body">
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/2.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Top stories Tab -->
+                    <div id="topStories" class="tab-content">
+                        <div class="swiper" id="topStoriesSwiper">
+                            <ul class="swiper-wrapper featured-body">
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/2.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Popular articles Tab -->
+                    <div id="popularArticles" class="tab-content">
+                        <div class="swiper" id="popularArticlesSwiper">
+                            <ul class="swiper-wrapper featured-body">
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/2.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Recently added Tab -->
+                    <div id="recentlyAdded" class="tab-content">
+                        <div class="swiper" id="recentlyAddedSwiper">
+                            <ul class="swiper-wrapper featured-body">
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/2.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="featured-item swiper-slide zoom-effect animate-up">
+                                    <div class="featured-image zoom-effect-image">
+                                        <img src="assets/images/our-stories/featured/1.png" alt="featured" />
+                                    </div>
+                                    <h3>Blog post title goes here</h3>
+                                    <div class="date">14.08.2021</div>
+                                    <div class="tags">
+                                        <a href="javascript:;">UX</a>
+                                        <a href="javascript:;">Interface design</a>
+                                        <a href="javascript:;">Workflow</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                                    <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                                        <span>Read more</span>
+                                        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-header">
+                    <h2>Our stories</h2>
+                </div>
+                <ul class="blog-body">
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/1.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/2.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/3.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/4.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/5.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="featured-item swiper-slide zoom-effect animate-up">
+                        <div class="featured-image zoom-effect-image">
+                            <img src="assets/images/our-stories/blogs/6.png" alt="blog" />
+                        </div>
+                        <h3>Blog post title</h3>
+                        <div class="date">14.08.2021</div>
+                        <div class="tags">
+                            <a href="javascript:;">UX</a>
+                            <a href="javascript:;">Interface design</a>
+                            <a href="javascript:;">Workflow</a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut a eu rhoncus, donec et varius ...</p>
+                        <a href="javascript:;" class="btn btn-md btn-dark-outline">
+                            <span>Read more</span>
+                            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9072 0.407996L18.9394 4.54114C19.1869 4.79477 19.1869 5.20599 18.9394 5.45962L14.9072 9.59277C14.6598 9.8464 14.2586 9.8464 14.0112 9.59277C13.7638 9.33914 13.7638 8.92792 14.0112 8.67429L16.9618 5.64984H6.95546H0.75V4.35092H16.9618L14.0112 1.32647C13.7638 1.07284 13.7638 0.661627 14.0112 0.407996C14.2586 0.154366 14.6598 0.154366 14.9072 0.407996Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="blog-footer animate-up">
+                    <a class="btn btn-blue btn-md" href="javascript:;">Load more articles</a>
+                </div>
+            </div>
+        </section>
+        <!-- Project Section -->
+        <section id="bookMeeting" class="project-section">
+            <div class="container">
+                <div class="project-header">
+                    <h2 class="animate-up">Let’s talk about <span class="highlight">your project</span></h2>
+                    <p class="animate-up">Book in a free 30 minute meeting or drop us a line</p>
+                </div>
+                <div class="project-body animate-up">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/bluemonk-agency/15min?back=1&month=2023-01?text_color=012451&primary_color=2684ff"></div>
+                    <!-- Calendly inline widget end -->
+                </div>
+                <div class="project-footer animate-up">
+                    <a href="mailto:hello@bluemonk.agency" class="btn btn-blue btn-md">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_338171_2762)">
+                            <path d="M20.5 4H4.5C3.4 4 2.51 4.9 2.51 6L2.5 18C2.5 19.1 3.4 20 4.5 20H20.5C21.6 20 22.5 19.1 22.5 18V6C22.5 4.9 21.6 4 20.5 4ZM20.5 8L12.5 13L4.5 8V6L12.5 11L20.5 6V8Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_338171_2762">
+                            <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span>email us</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section text-light">
+        <div class="container">
+            <div class="footer-body">
+                <a class="top" href="#top">
+                    <img src="assets/images/svg/up.svg" alt="up" />
+                </a>
+                <div class="footer-left">
+                    <h3>We create brands that cut through the noise.</h3>
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="javascript:;">Our Stories</a></li>
+                    </ul>
+                    <ul class="terms">
+                        <li><a target="_blank" href="javascript:;">Privacy statement</a></li>
+                        <li>| </li>
+                        <li><a target="_blank" href="javascript:;">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <a href="javascript:;" class="logo">
+                        <img src="assets/images/svg/logo-light.svg" alt="logo" />
+                    </a>
+                    <ul class="social">
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/company/68925000/admin/">
+                                <img src="assets/images/svg/social/LinkedIN.svg" alt="LinkedIN" />
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <img src="assets/images/svg/social/WhatsApp.svg" alt="WhatsApp" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="links">
+                        <li><a href="javascript:;">hello@bluemonk.agency</a></li>
+                    </ul>
+                    <ul class="terms">
+                        <li><a target="_blank" href="javascript:;">© 2023 Bluemonk Agency</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--  Scroll reveal JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <!-- Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- Main JS -->
+    <script type="text/javascript" src="dist/scripts.min.js"></script>
+
+</body>
+
+</html>
