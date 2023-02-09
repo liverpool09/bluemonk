@@ -126,12 +126,12 @@
     & .featured-image {
         margin-bottom: 24px;
         border-radius: 11px;
-        min-height: 386px;
+        height: 386px;
         @include tablet {
-            min-height: 286px;
+            height: 286px;
         }
         @include mobile {
-            min-height: 204px;
+            height: 204px;
         }
         & img {
             border-radius: 11px;
@@ -194,7 +194,6 @@
         & .featured-item {
             & .featured-image {
                 height: 204px;
-                min-height: 204px;
             }
             & .btn {
                 width: 100%;

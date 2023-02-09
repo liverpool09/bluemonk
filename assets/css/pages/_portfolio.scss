@@ -95,7 +95,7 @@
                     width: 100%;
                 }
                 & .portfolio-image {
-                    min-height: 330px;
+                    height: 330px;
                 }
             }
             &:nth-child(6n-1) {
@@ -107,18 +107,18 @@
                     width: 100%;
                 }
                 & .portfolio-image {
-                    min-height: 430px;
+                    height: 430px;
                     @include mobile {
-                        min-height: 330px;
+                        height: 330px;
                     }
                 }
             }
             & .portfolio-image {
                 margin-bottom: 24px;
                 border-radius: 11px;
-                min-height: 430px;
+                height: 430px;
                 @include mobile {
-                    min-height: 330px;
+                    height: 330px;
                 }
                 & img {
                     border-radius: 11px;

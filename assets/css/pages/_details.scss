@@ -14,40 +14,43 @@
     & .banner-block {
         display: flex;
         align-items: center;
-        column-gap: 15px;
-        padding-top: 120px;
+        column-gap: 40px;
+        padding-top: 140px;
         @include tablet {
             flex-direction: column-reverse;
             padding-top: 150px;
+            column-gap: 15px;
         }
         @include mobile {
             padding-top: 190px;
         }
         & .banner-image {
-            top: 220px;
+            top: 90px;
             position: relative;
             flex-shrink: 0;
-            margin-left: -40px;
+            margin-left: -100px;
             @include laptop {
                 max-width: 620px;
-                top: 170px;
+                margin-left: -70px;
+                top: 70px;
             }
             @include tablet {
                 max-width: 620px;
-                top: 80px;
+                top: 70px;
+                margin-left: 0;
             }
             @include mobile {
                 top: 40px;
             }
-            &.banner-image-2 {
-                top: 110px;
-                @include tablet {
-                    top: 80px;
-                }
-                @include mobile {
-                    top: 40px;
-                }
-            }
+            // &.banner-image-2 {
+            //     top: 110px;
+            //     @include tablet {
+            //         top: 80px;
+            //     }
+            //     @include mobile {
+            //         top: 40px;
+            //     }
+            // }
             & img {
                 flex-shrink: 0;
             }
@@ -83,13 +86,12 @@
         display: flex;
         flex-direction: column;
         row-gap: 24px;
-        max-width: 793px;
-        margin-left: 100px;
+        padding: 0 100px;
         @include laptop {
-            margin-left: 50px;
+            padding: 0 50px;
         }
         @include tablet {
-            margin-left: 0;
+            padding: 0;
         }
     }
 }
@@ -390,54 +392,37 @@
         }
     }
     & .realted-item {
-        background-color: $cream;
         width: 100%;
         border-radius: 13px;
         display: flex;
         flex-direction: column;
-        padding: 80px;
         position: relative;
-        row-gap: 15px;
-        @include laptop {
-            padding: 60px;
-        }
-        @include mobile {
-            padding: 20px;
-        }
+        overflow: hidden;
         & .related-banner {
-            @include tablet {
-                margin-top: 50px;
-            }
-        }
-        & .related-logo {
-            align-self: flex-end;
-            position: absolute;
-            top: 80px;
-            right: 80px;
-            @include laptop {
-                top: 60px;
-                right: 60px;
-            }
-            @include mobile {
-                top: 20px;
-                right: 20px;
-                width: 80px;
-            }
+            max-width: 100%;
+            min-height: 500px;
+            object-fit: cover;
         }
         & .related-bottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
             display: flex;
-            align-items: center;
             justify-content: space-between;
             column-gap: 88px;
+            padding: 44px 84px;
             @include laptop {
                 flex-direction: column;
                 row-gap: 42px;
                 align-items: flex-start;
+                padding: 44px;
             }
             @include mobile {
                 row-gap: 32px;
                 align-items: center;
                 text-align: center;
+                padding: 32px;
             }
         }
     }
@@ -462,21 +447,6 @@
             }
             @include mobile {
                 max-width: 85%;
-            }
-            &:nth-child(1) {
-                & .realted-item {
-                    background-color: $primary;
-                }
-            }
-            &:nth-child(2) {
-                & .realted-item {
-                    background-color: $cream;
-                }
-            }
-            &:nth-child(3) {
-                & .realted-item {
-                    background-color: $blue-400;
-                }
             }
         }
     }
