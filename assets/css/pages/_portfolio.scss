@@ -98,7 +98,8 @@
                     height: 330px;
                 }
             }
-            &:nth-child(6n-1) {
+            &:nth-child(6n-1),
+            &:nth-child(8n) {
                 width: calc(55% - 40px);
                 @include laptop {
                     width: calc(55% - 20px);
